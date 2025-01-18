@@ -1,5 +1,6 @@
 package com.ecs.my_ecommerce_app.entity;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -8,8 +9,7 @@ import lombok.*;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
-@Builder
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ProductImage extends BaseEntity{
 
     @ManyToOne(fetch = FetchType.LAZY)

@@ -13,8 +13,6 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
-@Builder
 public class OrderItem extends BaseEntity{
 
     @ManyToOne(fetch = FetchType.LAZY)

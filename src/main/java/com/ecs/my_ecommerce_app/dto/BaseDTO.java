@@ -1,5 +1,8 @@
 package com.ecs.my_ecommerce_app.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,15 +14,31 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class BaseDTO {
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public abstract class BaseDTO {
 
+    @JsonProperty("id")
     private Long id;
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
-    private Boolean isActive;
-    private UserSummaryDTO createdBy;
-    private UserSummaryDTO modifiedBy;
 
+    @JsonProperty("created_at")
+    @JsonFormat(pattern = "dd-MM-yyyy HH:mm:ss")
+    private LocalDateTime createdAt;
+
+    @JsonProperty("updated_at")
+    @JsonFormat(pattern = "dd-MM-yyyy HH:mm:ss")
+    private LocalDateTime updatedAt;
+
+    @JsonProperty("is_active")
+    private Boolean isActive;
+
+    @JsonProperty("created_by")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private UserSummaryDTO createdBy;
+
+    @JsonProperty("modified_by")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private UserSummaryDTO modifiedBy;
+    @JsonProperty("is_new")
     public boolean isNew(){
         return id == null;
     }

@@ -1,21 +1,20 @@
 package com.ecs.my_ecommerce_app.dto;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.math.BigDecimal;
-
 
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
-@Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class OrderItemDTO extends BaseDTO{
+public class CartItemDTO extends BaseDTO{
 
-    @JsonProperty("order_id")
-    private Long orderId;
+    @JsonProperty("cart_id")
+    private Long cartId;
 
     @JsonProperty("product_id")
     private Long productId;
@@ -26,13 +25,7 @@ public class OrderItemDTO extends BaseDTO{
     @JsonProperty("quantity")
     private Integer quantity;
 
-    @JsonProperty("unit_price")
-    private BigDecimal unitPrice;
-
-    @JsonProperty("subtotal")
-    private BigDecimal subtotal;
-
-
-
+    @JsonProperty("price")
+    private BigDecimal price;
 
 }
