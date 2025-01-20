@@ -1,4 +1,5 @@
 package com.ecs.my_ecommerce_app.entity;
+import com.ecs.my_ecommerce_app.annotation.SoftDeletable;
 import com.ecs.my_ecommerce_app.enums.PaymentStatus;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;

@@ -1,5 +1,6 @@
 package com.ecs.my_ecommerce_app.entity;
 
+import com.ecs.my_ecommerce_app.annotation.SoftDeletable;
 import jakarta.persistence.*;
 import lombok.*;
 

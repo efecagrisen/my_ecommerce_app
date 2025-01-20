@@ -1,7 +1,9 @@
 package com.ecs.my_ecommerce_app.entity;
 
+import com.ecs.my_ecommerce_app.annotation.SoftDeletable;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
@@ -13,6 +15,7 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @NoArgsConstructor
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class OrderItem extends BaseEntity{
 
     @ManyToOne(fetch = FetchType.LAZY)

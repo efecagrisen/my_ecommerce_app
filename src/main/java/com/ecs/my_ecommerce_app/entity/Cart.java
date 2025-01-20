@@ -1,5 +1,6 @@
 package com.ecs.my_ecommerce_app.entity;
 
+import com.ecs.my_ecommerce_app.annotation.SoftDeletable;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;

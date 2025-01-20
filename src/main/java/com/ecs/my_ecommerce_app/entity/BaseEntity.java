@@ -1,5 +1,6 @@
 package com.ecs.my_ecommerce_app.entity;
 
+import com.ecs.my_ecommerce_app.annotation.SoftDeletable;
 import com.ecs.my_ecommerce_app.config.AuditingListener;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -15,6 +16,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @EntityListeners(AuditingListener.class)
+@SoftDeletable
 public abstract class BaseEntity {
 
     @Id
@@ -41,6 +43,9 @@ public abstract class BaseEntity {
 
     @Column(nullable = false)
     private Boolean isActive = true;
+
+    @Column(nullable = false)
+    private Boolean isDeleted = true;
 
 
 
