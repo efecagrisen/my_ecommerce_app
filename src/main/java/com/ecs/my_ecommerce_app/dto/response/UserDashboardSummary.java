@@ -1,4 +1,4 @@
-package com.ecs.my_ecommerce_app.helper;
+package com.ecs.my_ecommerce_app.dto.response;
 import com.ecs.my_ecommerce_app.dto.CouponDTO;
 import com.ecs.my_ecommerce_app.dto.NotificationDTO;
 import com.ecs.my_ecommerce_app.dto.PaymentMethodDTO;

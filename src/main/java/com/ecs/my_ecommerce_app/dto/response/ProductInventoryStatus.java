@@ -1,4 +1,4 @@
-package com.ecs.my_ecommerce_app.helper;
+package com.ecs.my_ecommerce_app.dto.response;
 
 import com.ecs.my_ecommerce_app.enums.InventoryStatus;
 import com.fasterxml.jackson.annotation.JsonFormat;

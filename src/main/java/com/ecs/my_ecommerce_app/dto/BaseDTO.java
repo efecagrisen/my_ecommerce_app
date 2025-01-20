@@ -1,5 +1,6 @@
 package com.ecs.my_ecommerce_app.dto;
 
+import com.ecs.my_ecommerce_app.dto.response.UserSummaryDTO;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;

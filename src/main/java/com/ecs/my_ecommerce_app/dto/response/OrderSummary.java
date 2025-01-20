@@ -1,4 +1,4 @@
-package com.ecs.my_ecommerce_app.helper;
+package com.ecs.my_ecommerce_app.dto.response;
 import com.ecs.my_ecommerce_app.enums.OrderStatus;
 import com.ecs.my_ecommerce_app.enums.PaymentStatus;
 import com.ecs.my_ecommerce_app.enums.ShippingStatus;
