@@ -1,9 +1,9 @@
 package com.ecs.my_ecommerce_app.repository;
 
 import com.ecs.my_ecommerce_app.entity.CartItem;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.ecs.my_ecommerce_app.repository.base.BaseRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CartItemRepository extends JpaRepository<CartItem, Long> {
+public interface CartItemRepository extends BaseRepository<CartItem, Long> {
 }

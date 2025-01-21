@@ -1,9 +1,9 @@
 package com.ecs.my_ecommerce_app.repository;
 
 import com.ecs.my_ecommerce_app.entity.Product;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.ecs.my_ecommerce_app.repository.base.BaseRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ProductRepository extends JpaRepository<Product, Long> {
+public interface ProductRepository extends BaseRepository<Product, Long> {
 }
