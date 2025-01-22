@@ -16,9 +16,11 @@ public interface BaseRepository<T, ID extends Serializable> extends JpaRepositor
     Optional<T> findByIdAndIsActiveTrueAndIsDeletedFalse(ID id);
 
     List<T> findByIsDeletedFalse();
+    List<T> findByIsActiveTrue();
     List<T> findByIsActiveTrueAndIsDeletedFalse();
 
     Page<T> findByIsDeletedFalse(Pageable pageable);
+    Page<T> findByIsActiveTrue(Pageable pageable);
     Page<T> findByIsActiveTrueAndIsDeletedFalse(Pageable pageable);
 
     long countByIsActiveTrue();

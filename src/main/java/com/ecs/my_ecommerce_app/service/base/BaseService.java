@@ -2,6 +2,7 @@ package com.ecs.my_ecommerce_app.service.base;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.io.Serializable;
 import java.util.List;
@@ -45,9 +46,14 @@ public interface BaseService <T, ID extends Serializable>{
 
     void batchDeactivate(List<ID> ids);
 
-    void deleteById(ID id);
+    void deletePermanentlyById(ID id);
 
-    void delete(T entity);
+    void deletePermanently(T entity);
 
 
+    @Transactional
+    void batchDeletePermanentlyById(List<ID> ids);
+
+    @Transactional
+    void batchDeletePermanently(List<T> entities);
 }
