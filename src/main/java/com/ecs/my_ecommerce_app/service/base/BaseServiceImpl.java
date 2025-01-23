@@ -17,6 +17,10 @@ public abstract class BaseServiceImpl <T, ID extends Serializable> implements Ba
 
     protected final BaseRepository<T, ID> repository;
 
+//    public BaseServiceImpl(BaseRepository<T, ID> repository) {
+//        this.repository = repository;
+//    }
+
     @Override
     public Optional<T> findById(ID id) {
         return repository.findByIdAndIsActiveTrueAndIsDeletedFalse(id);
